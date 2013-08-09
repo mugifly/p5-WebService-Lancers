@@ -171,7 +171,7 @@ Create an instance of WebService::Lancers.
 
 =over 4
 
-=item * ua : Any LWP::UserAgent instance.
+=item * ua : Any L<LWP::UserAgent> instance.
 
 =back
 
@@ -179,7 +179,7 @@ Create an instance of WebService::Lancers.
 
 Fetch the works from Lancers web-site.
 
-Then, return an instance of WebService::Lancers::Response.
+Then, return an instance of L<WebService::Lancers::Response>.
 
 L<https://github.com/mugifly/p5-WebService-Lancers/blob/master/lib/WebService/Lancers/Response.pm>
 
