@@ -4,7 +4,8 @@ use Module::Build;
 
 my $builder = Module::Build->new(
     module_name         => 'WebService::Lancers',
-    license             => 'artistic2',
+    license             => 'perl',
+    dist_abstract	=> 'Scrapping module with perl5 for the Lancers website',
     dist_author         => 'Masanori Ohgita (http://ohgita.info/)',
     dist_version_from   => 'lib/WebService/Lancers.pm',
     requires => {

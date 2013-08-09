@@ -1,6 +1,6 @@
 =head1 NAME
 
-WebService::Lancers
+WebService::Lancers - Scrapping module with perl5 for the Lancers website
 
 =head1 NOTICE
 
@@ -41,7 +41,7 @@ Create an instance of WebService::Lancers.
 
 =over 4
 
-=item * ua : Any LWP::UserAgent object.
+=item * ua : Any LWP::UserAgent instance.
 
 =back
 
@@ -49,19 +49,21 @@ Create an instance of WebService::Lancers.
 
 Fetch the works from Lancers web-site.
 
-Then, return the WebService::Lancers::Response object.
+Then, return an instance of WebService::Lancers::Response.
+
+L<https://github.com/mugifly/p5-WebService-Lancers/blob/master/lib/WebService/Lancers/Response.pm>
 
 =head2 useragent ( [$user_agent_object] )
 
-Get or Set the UserAgent object (like the LWP::UserAgent).
+Get or Set the UserAgent instance (like the LWP::UserAgent).
 
 =head2 last_request ()
 
-Get the last request as the L<HTTP::Request> object.
+Get the last request as an instance of L<HTTP::Request>.
 
 =head2 last_response ()
 
-Get the last request as the L<HTTP::Response> object.
+Get the last request as an instance of L<HTTP::Response>.
 
 =head1 SEE ALSO
 
