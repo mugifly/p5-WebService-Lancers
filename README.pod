@@ -1,0 +1,79 @@
+=head1 NAME
+
+WebService::Lancers
+
+=head1 NOTICE
+
+This modules is UNOFFICIAL, released as ALPHA version.
+Please use this under the SELF-RESPONSIBILITY ;)
+
+Your feedback is highly appreciated.
+
+=head1 SYNOPSIS
+
+  use WebService::Lancers;
+  
+  my $c = WebService::Lancers->new();
+  
+  # Request works
+  my $response = $c->fetch_work( keyword => 'perl' );
+  
+  # Print each works title
+  while ( my $work = $response->next ){
+        print $work->title . "(id:". $work->id .")\n";
+        print $work->url."\n";
+        print $work->date->strftime("%Y-%m-%d %H:%M:%S %z")."\n";
+        print "\n";
+  }
+
+=head1 INSTALLATION (from GitHub)
+
+  $ git clone git://github.com/mugifly/p5-WebService-Lancers.git
+  $ cpanm ./p5-WebService-Lancers
+
+=head1 METHODS
+
+=head2 new ( [%params] )
+
+Create an instance of WebService::Lancers.
+
+=head3 %params (Optional) : 
+
+=over 4
+
+=item * ua : Any LWP::UserAgent object.
+
+=back
+
+=head2 fetch_work ( [%params] )
+
+Fetch the works from Lancers web-site.
+
+Then, return the WebService::Lancers::Response object.
+
+=head2 useragent ( [$user_agent_object] )
+
+Get or Set the UserAgent object (like the LWP::UserAgent).
+
+=head2 last_request ()
+
+Get the last request as the L<HTTP::Request> object.
+
+=head2 last_response ()
+
+Get the last request as the L<HTTP::Response> object.
+
+=head1 SEE ALSO
+
+L<https://github.com/mugifly/p5-WebService-Lancers/>
+
+L<Hash::AsObject>
+
+L<LWP::UserAgent>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2013, Masanori Ohgita (http://ohgita.info/).
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
